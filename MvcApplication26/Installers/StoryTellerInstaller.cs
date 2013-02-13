@@ -14,11 +14,15 @@ namespace CastleDemo.Installers
     public class StoryTellerInstaller : IWindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
-        {                    
+        {
+            container.Register(
+                Component.For<LoggingInterceptor>()
+                    .ImplementedBy<LoggingInterceptor>());     
+  
             container.Register(
                 Component.For<IStoryTeller>()
-                         .ImplementedBy<DutchStoryTeller>() )  ;      //     FrenchStoryTeller
-                         //.Interceptors(InterceptorReference.ForType<LoggingInterceptor>()).Anywhere);
+                         .ImplementedBy<DutchStoryTeller>()       //     FrenchStoryTeller
+                         .Interceptors(InterceptorReference.ForType<LoggingInterceptor>()).Anywhere);
 
         }
     }
