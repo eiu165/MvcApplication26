@@ -137,6 +137,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Installers\ControllersInstaller.cs" />
+    <Compile Include="Installers\LoggingInterceptorInstaller.cs" />
     <Compile Include="Installers\StoryTellerInstaller.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Plumbing\WindsorControllerFactory.cs" />

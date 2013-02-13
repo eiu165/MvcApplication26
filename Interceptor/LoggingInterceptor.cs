@@ -16,6 +16,7 @@ namespace Interceptor
             try
             {
                 Console.WriteLine("Logging On Start"); 
+                
                 invocation.Proceed();
                 Console.WriteLine("Logging On Success");
             }

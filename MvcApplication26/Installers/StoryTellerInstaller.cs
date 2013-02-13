@@ -15,9 +15,6 @@ namespace CastleDemo.Installers
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(
-                Component.For<LoggingInterceptor>()
-                    .ImplementedBy<LoggingInterceptor>());     
   
             container.Register(
                 Component.For<IStoryTeller>()
